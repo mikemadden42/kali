@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "kali"
+version = "0.1.0"
+description = "Exploring polars"
+authors = ["Michael Madden <mikemadden42@icloud.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+polars = "^0.19.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+select = [
+    # Pyflakes
+    "F",
+    # Pycodestyle
+    "E",
+    "W",
+    # isort
+    "I",
+    # flake8-bandit
+    "S",
+    # flake8-bugbear
+    "B",
+    # Pylint
+    "PL"
+]
+ignore = [
+    # tests use assert
+    "S101"
+]
