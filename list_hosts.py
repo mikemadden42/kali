@@ -10,6 +10,10 @@ fiveg_df = df.filter(pl.col("Connection Type") == "5G")
 twog_df = df.filter(pl.col("Connection Type") == "2.4G")
 
 # Display the filtered DataFrame.
-print(wired_df)
-print(fiveg_df)
-print(twog_df)
+with pl.Config() as cfg:
+    # Show all rows.
+    # https://pola-rs.github.io/polars/py-polars/html/reference/config.html
+    cfg.set_tbl_rows(-1)
+    print(wired_df)
+    print(fiveg_df)
+    print(twog_df)
