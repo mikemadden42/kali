@@ -16,7 +16,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
-select = [
+lint.select = [
     # Pyflakes
     "F",
     # Pycodestyle
@@ -31,7 +31,7 @@ select = [
     # Pylint
     "PL"
 ]
-ignore = [
+lint.ignore = [
     # tests use assert
     "S101"
 ]
