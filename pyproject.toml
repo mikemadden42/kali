@@ -1,19 +1,11 @@
-[tool.poetry]
+[project]
 name = "kali"
 version = "0.1.0"
 description = "Exploring polars"
-authors = ["Michael Madden <mikemadden42@icloud.com>"]
-license = "MIT"
-readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.10"
-polars = "^1.6.0"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.13"
+dependencies = [
+    "polars>=1.35.2",
+]
 
 [tool.ruff]
 lint.select = [
@@ -34,4 +26,9 @@ lint.select = [
 lint.ignore = [
     # tests use assert
     "S101"
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.8",
 ]
